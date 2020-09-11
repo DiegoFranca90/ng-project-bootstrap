@@ -1,0 +1,19 @@
+// Não colocar regras CSS!
+
+//node_modules/bootstrap/scss/_variables.scss
+$font-sizes: 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 28, 32, 36, 48, 64, 72 !default;
+
+// Breakpoints
+/*
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+*/
+$theme-colors: ();
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: ()

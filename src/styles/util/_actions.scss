@@ -1,0 +1,12 @@
+@each $color, $value in $theme-colors {
+  .hover-text-#{$color} {
+    &:hover {
+      color: $value !important;
+    }
+  }
+  .hover-bg-#{$color} {
+    &:hover {
+      background-color: $value !important;
+    }
+  }
+}
