@@ -19,7 +19,7 @@ export class ApiInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (req.url.match(/^(?:(?:\w+:\/\/)|\/)/) === null) {
-      const apiReq = req.clone({url: `${environment.api.replace(/\/$/, '')}/${req.url}`});
+      const apiReq = req.clone({url: `${environment.url.replace(/\/$/, '')}/${req.url}`});
       return next.handle(apiReq);
     }
     return next.handle(req);
