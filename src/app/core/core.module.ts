@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ComponentsModule } from "./components/components.module";
-import { PipesModule } from "./pipes/pipes.module";
-import { LayoutsModule } from './layouts/layouts.module';
-import { DirectivesModule } from "./directives/directives.module";
-import { HTTP_INTERCEPTORS } from "@angular/common/http";
-import { ApiInterceptor } from "@core/http/api.interceptor";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ComponentsModule} from "./components";
+import {PipesModule} from "./pipes";
+import {LayoutsModule} from './layouts';
+import {DirectivesModule} from "./directives";
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {ApiInterceptor} from "./http";
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { ApiInterceptor } from "@core/http/api.interceptor";
     LayoutsModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true }
+    {provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}
   ],
   exports: [
     ComponentsModule,
